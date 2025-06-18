@@ -33,6 +33,37 @@
     <!-- Botón para continuar -->
     <button id="continue-btn" class="hidden">Explorar la Galaxia</button>
 
+    <!-- Aplicación principal (inicialmente oculta) -->
+    <div class="stars" id="stars"></div>
+
+    <div class="app-container" id="appContainer">
+        <div class="header">
+            <h1>🌌 Galaxy Explorer 🌌</h1>
+            <p>Descubre personajes, planetas, naves y más del universo Star Wars</p>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-category="people">👥 Personajes</button>
+            <button class="filter-btn" data-category="planets">🪐 Planetas</button>
+            <button class="filter-btn" data-category="starships">🚀 Naves</button>
+            <button class="filter-btn" data-category="vehicles">🚗 Vehículos</button>
+            <button class="filter-btn" data-category="films">🎬 Películas</button>
+            <button class="filter-btn" data-category="species">👽 Especies</button>
+        </div>
+
+        <div class="search-container">
+            <input type="text" class="search-input" id="searchInput" placeholder="Buscar en la galaxia...">
+        </div>
+
+        <div class="loading" id="loading" style="display: none;">
+            Cargando datos de la galaxia... 🌟
+        </div>
+
+        <div class="results-grid" id="resultsGrid"></div>
+
+        <div class="pagination" id="pagination"></div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
