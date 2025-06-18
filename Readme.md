@@ -2,10 +2,13 @@
 
 Este proyecto es una landing page acerca de **[Star Wars]**, diseñada con el fin de gestionar personajes, naves y planetas del universo Star Wars, permitiendo a los usuarios explorar, buscar y administrar información detallada.
 
+## 🌐 Demo en línea
+Puedes ver el portafolio publicado en GitHub Pages aquí:
+👉 https://deamacevedo.github.io/Star-Wars-JD/
+
 Incluye las siguientes características generales:
 - Gestión integral de personajes, naves, planetas y especies del universo Star Wars.
 - Búsqueda y filtrado avanzado por nombre, tipo, atributos y relaciones entre entidades.
-
 
 ## Tabla de Contenidos
 
