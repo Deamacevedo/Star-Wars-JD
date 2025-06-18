@@ -284,7 +284,7 @@ async function loadData(category, page = 1) {
         document.getElementById('loading').style.display = 'none';
     } catch (error) {
         console.error('Error cargando datos:', error);
-        document.getElementById('loading').innerHTML = 'Error cargando datos de la galaxia 😞';
+        document.getElementById('loading').innerHTML = 'Error cargando datos de la galaxia';
     }
 }
 
@@ -331,14 +331,14 @@ function getImageForItem(item, category) {
 
 function getCategoryEmoji(category) {
     const emojis = {
-        people: '👤',
-        planets: '🪐',
-        starships: '🚀',
-        vehicles: '🚗',
-        films: '🎬',
-        species: '👽'
+        people: '',
+        planets: '',
+        starships: '',
+        vehicles: '',
+        films: '',
+        species: ''
     };
-    return emojis[category] || '⭐';
+    return emojis[category] || '';
 }
 
 function getCategoryName(category) {
