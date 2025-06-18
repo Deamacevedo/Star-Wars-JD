@@ -20,7 +20,7 @@ const defaultImages = {
 const customImages = {
     // PERSONAJES - Agrega aquí los nombres exactos como aparecen en SWAPI
     'Luke Skywalker': './images/personajes/luke.png',
-    'Leia Organa': './images/personajes/leia.jpg',
+    'Leia Organa': './images/personajes/Leia.jpg',
     'Han Solo': './images/personajes/Han-solo.jpg',
     'Darth Vader': './images/personajes/Darth-Vader.jpg',
     'Obi-Wan Kenobi': './images/personajes/Obi-Wan.jpg',
@@ -28,7 +28,7 @@ const customImages = {
     'Chewbacca': './images/personajes/Chewbacca.jpg',
     'C-3PO': './images/personajes/C-3PO.jpg',
     'R2-D2': './images/personajes/R2-D2.jpg',
-    'Anakin Skywalker': './images/personajes/anakin-Skywalker.jpg',
+    'Anakin Skywalker': './images/personajes/Anakin-Skywalker.jpg',
     'Padmé Amidala': './images/personajes/Padme-Amidala.jpg',
     'Mace Windu': './images/personajes/Mace-Windu.jpg',
     'Qui-Gon Jinn': './images/personajes/qui-gon-jinn.jpg',
