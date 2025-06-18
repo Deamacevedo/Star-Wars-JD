@@ -1,0 +1,284 @@
+/* Estilos para la animación inicial */
+        .fixed {
+            position: fixed;
+        }
+
+        .top-0 {
+            top: 0;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .h-screen {
+            height: 100vh;
+        }
+
+        .block {
+            display: block;
+        }
+
+        .overflow-hidden {
+            overflow: hidden;
+        }
+
+        .object-cover {
+            object-fit: cover;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .px-20 {
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
+
+        .py-16 {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .text-pink-300 {
+            color: rgb(249, 168, 212);
+        }
+
+        .drop-shadow-2xl {
+            filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+        }
+
+        .scale-105 {
+            transform: scale(1.05);
+        }
+
+        .z-10 {
+            z-index: 10;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Animación inicial */
+        #hero-key {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        #hero-key>div {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover;
+        }
+
+        /* Asegurar que el contenedor del hero ocupe toda la pantalla */
+
+        #logo-mask {
+            background: white;
+            mask-image: url("./assets/Logostar.svg");
+            mask-position: center 25%;
+            mask-repeat: no-repeat;
+            mask-size: clamp(8100vh, 4500%, 0vh);
+        }
+
+        /* Base styles */
+        html,
+        body {
+            background: #000;
+            height: 300vh;
+            overflow-x: hidden;
+            overscroll-behavior: none;
+            color: white;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Asegurar que el contenedor inicial ocupe toda la pantalla */
+        #logo-mask {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        #logo-mask section {
+            width: 100%;
+            height: 100%;
+        }
+
+        #logo-mask picture {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        /* Indicador de scroll */
+        .scroll-indicator {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 1000;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+
+        .scroll-indicator.hidden {
+            opacity: 0;
+        }
+
+        .scroll-indicator svg {
+            animation: bounce 2s infinite;
+            filter: drop-shadow(0 0 10px rgba(255, 77, 77, 0.7));
+        }
+
+        .scroll-indicator p {
+            color: #ff4d4d;
+            font-size: 14px;
+            margin: 8px 0 0 0;
+            text-shadow: 0 0 10px rgba(255, 77, 77, 0.7);
+            font-weight: bold;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Botón de continuar */
+        #continue-btn {
+            position: fixed;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, #ff4d4d, #ff1a1a);
+            border: none;
+            padding: 15px 40px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(255, 77, 77, 0.3);
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        #continue-btn.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #continue-btn:hover {
+            transform: translateX(-50%) scale(1.1);
+            box-shadow: 0 0 30px rgba(255, 77, 77, 0.6);
+        }
+
+        /* Estilos para la aplicación principal */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            /* AQUÍ PUEDES CAMBIAR LA OPACIDAD DE LAS ESTRELLAS EN LA VISTA PRINCIPAL */
+            animation: twinkle 2s infinite;
+        }
+
+        @keyframes twinkle {
+
+            /* OPACIDAD MÍNIMA Y MÁXIMA DE LAS ESTRELLAS - Cambia estos valores */
+            0%,
+            100% {
+                opacity: 0.2;
+            }
+
+            /* Opacidad mínima - cambia este valor */
+            50% {
+                opacity: 0.9;
+            }
+
+            /* Opacidad máxima - cambia este valor */
+        }
+
+        .app-container {
+            position: relative;
+            z-index: 2;
+            min-height: 100vh;
+            padding: 20px;
+            display: none;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* OPACIDAD DE ESTRELLAS EN LA VISTA PRINCIPAL DE LA APP */
+        .app-container.active~.stars .star {
+            /* CAMBIA ESTOS VALORES PARA CONTROLAR LA OPACIDAD EN LA VISTA PRINCIPAL */
+            animation: twinkle-app 2s infinite;
+        }
+
+        @keyframes twinkle-app {
+
+            /* OPACIDAD ESPECÍFICA PARA LA VISTA DE LA APLICACIÓN */
+            0%,
+            100% {
+                opacity: 0.6;
+            }
+
+            /* Opacidad mínima - CAMBIA ESTE VALOR */
+            50% {
+                opacity: 1.0;
+            }
+
+            /* Opacidad máxima - CAMBIA ESTE VALOR */
+        }

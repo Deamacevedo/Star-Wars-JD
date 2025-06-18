@@ -1,11 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Star Wars</title>
+    <title>Star Wars Galaxy Explorer</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-    
+    <!-- Animación inicial -->
+    <div id="logo-mask" class="fixed top-0 w-full h-screen">
+        <section>
+            <picture id="hero-key" class="h-screen scale-105 top-0 block z-10">
+                <img id="hero-key-background" src="./assets/backstar.webp" class="w-full h-full object-cover">
+            </picture>
+        </section>
+    </div>
+
+    <!-- Indicador de scroll -->
+    <div id="scroll-indicator" class="scroll-indicator">
+        <svg width="34" height="14" viewBox="0 0 34 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" class="_1smfa210" focusable="false"
+            style="color: #ff4d4d; translate: none; rotate: none; scale: none; transform: translate3d(0px, 0.1711px, 0px) scale(0.9957, 0.9957); opacity: 0.9872; visibility: inherit;">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M33.5609 1.54346C34.0381 2.5875 33.6881 3.87821 32.7791 4.42633L17.0387 13.9181L1.48663 4.42115C0.580153 3.86761 0.235986 2.57483 0.717909 1.53365C1.19983 0.492464 2.32535 0.097152 3.23182 0.650692L17.0497 9.08858L31.051 0.64551C31.96 0.0973872 33.0837 0.499411 33.5609 1.54346Z"
+                fill="currentColor"></path>
+        </svg>
+        <p style="margin-top: 15px;">Desliza hacia abajo</p>
+    </div>
+
+    <!-- Botón para continuar -->
+    <button id="continue-btn" class="hidden">Explorar la Galaxia</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script src="./main.js"></script>
 </body>
+
 </html>
